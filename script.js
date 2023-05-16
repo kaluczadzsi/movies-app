@@ -8,12 +8,15 @@ const IMGPATH = 'https://image.tmdb.org/t/p/w1280';
 const SEARCHAPI =
   'https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=';
 
+const main = document.querySelector('main');
+
 async function getMovies() {
   const resp = await fetch(APIURL);
   const respData = await resp.json();
 
   respData.results.forEach((movie) => {
     const { poster_path, title, vote_average } = movie;
+
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
 
@@ -27,7 +30,8 @@ async function getMovies() {
         <span>${vote_average}</span>
     </div>
     `;
-    document.body.append(movieEl);
+
+    main.appendChild(movieEl);
   });
 }
 

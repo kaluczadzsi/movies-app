@@ -8,20 +8,26 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .movie {
   background-color: #373b69;
   border-radius: 3px;
   box-sizing: 0 4px 5px rgba(0, 0, 0, 0.2);
   width: 300px;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .movie-info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem;
   color: #eee;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .movie-info h3 {
@@ -33,6 +39,7 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
 }
+
 .movie img {
   width: 100%;
   display: block;
